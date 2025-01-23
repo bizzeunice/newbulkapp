@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", serif;
+}
+
+p,
+a {
+    font-family: "Roboto", serif;
+    ;
+}
+
+/* header */
+header {
+    background: linear-gradient(to right, rgb(192, 56, 255), rgb(81, 85, 190));
+    padding: 1% 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10%;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11pt;
+    letter-spacing: -0.5px;
+    color: white;
+    font-weight: 500;
+}
+
+/* end Header */
+
+/*  Intro section */
+#intro {
+    background: url(/imgs/home-banner.jpg);
+    background-size: cover;
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: 67% 30%;
+}
+
+.intro-txt {
+    padding-top: 100px;
+}
+
+.intro-txt h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: white;
+}
+
+.intro-txt p {
+    font-size: 12pt;
+    font-weight: 200;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.intro-txt a {
+    text-decoration: none;
+}
+
+.intro-txt button {
+    background-color: white;
+    padding: 14px 30px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    color: blueviolet;
+}
+
+/*  End Intro section */
+
+/*  Features section */
+#features {
+    background-color: rgb(242, 241, 241);
+    padding: 5% 10%;
+
+}
+
+.feat-head {
+    text-align: center;
+}
+
+.feat-head h1 {
+    padding-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.feat-head p {
+    padding-bottom: 20px;
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #000000a7;
+}
+
+.feat-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2%;
+    padding-top: 50px;
+
+}
+
+.feat-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.2);
+}
+
+.feat-box i {
+    background: linear-gradient(to right, rgb(191, 99, 219), rgb(49, 22, 112));
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.feat-container h1 {
+    padding-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.feat-container p {
+    padding-bottom: 20px;
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #000000a7;
+}
+
+/* End of Features section */
+
+/* Interior-one & video section */
+#interior-one {
+    background-color: rgba(0, 0, 0, 0.07);
+    padding: 5% 10%;
+}
+
+#video {
+    padding: 5% 10%;
+}
+
+.interior-container {
+    display: flex;
+    gap: 3%;
+}
+
+.interior-txt {
+    padding: 50px 40px;
+}
+
+.interior-txt h1 {
+    padding-bottom: 30px;
+    font-size: 2.5em;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.interior-txt p {
+    padding-bottom: 50px;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #000000a7;
+}
+
+.interior-txt a {
+    background: linear-gradient(to right, rgb(191, 99, 219), rgb(49, 22, 112));
+    padding: 14px 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: white;
+    font-size: 11pt;
+}
+
+.video-frame {
+    padding: 40px;
+}
+
+.video-frame iframe {
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+}
+
+/* End of Interior-one section */
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, rgb(191, 99, 219), rgb(49, 22, 112));
+    padding: 30px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 11pt;
+
+}
+
+
+/* CSs Responisveness */
+
+/* Styles for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .intro-img {
+        display: none;
+    }
+
+    .feat-container {
+        grid-template-columns: auto auto;
+    }
+
+    .interior-container {
+        flex-direction: column;
+    }
+
+}
+
+/* Styles for mobile */
+@media (max-width: 600px) {
+    .intro-txt h1 {
+        font-size: 1.5em;
+    }
+
+    .intro-img {
+        display: none;
+    }
+    .feat-container {
+        grid-template-columns: auto;
+    }
+    .interior-container {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    .interior-img img{
+        width: 100%;
+    }
+    
+}
+
+/* End of CSs Responisveness */
